@@ -111,64 +111,18 @@
         <!-- Start products detail-->
         <div class="col-lg-9">
             <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-2">
-                    <div class="card text-center shadow">
-                        <img src="https://speedoco.vteximg.com.br/arquivos/ids/190132/Aletas-unisex-naranja-8-08841F960-1.jpg?v=637830431793730000-2000-2000undefined"
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-2" *ngFor="let product of products; let i = index">
+                    <div class="card h-100 text-center shadow">
+                        <h5 class="card-title fw-semibold">{{product.nombre}}</h5>
+                        <img [src]="product.imagen"
                             class="card-img-top" alt="Fissure in Sandstone" />
                         <div class="card-body">
-                            <a href="/product" class="btn btn-primary">Ver produto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-2">
-                    <div class="card text-center shadow">
-                        <img src="https://speedoco.vteximg.com.br/arquivos/ids/196686/vestido-de-bano-ninos-azul-8-1285714863-1.jpg?v=638139698802630000-1000-1000undefined"
-                            class="card-img-top" alt="Fissure in Sandstone" />
-                        <div class="card-body">
-                            <a href="/product" class="btn btn-primary">Ver produto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-2">
-                    <div class="card text-center shadow">
-                        <img src="https://speedoco.vteximg.com.br/arquivos/ids/196845/camiseta-proteccion-solar-ninos-azul-8N028170052-1.jpg?v=638139699771500000-1000-1000undefined"
-                            class="card-img-top" alt="Fissure in Sandstone" />
-                        <div class="card-body ">
-                            <a href="/product" class="btn btn-primary">Ver produto</a>
+                            <p class = 'fw-semibold '>${{product.precio | number }}  COP</p>
+                            <a href="/product" id={{product.producto_id}} class="btn btn-primary" >Ver produto</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row ">
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-2">
-                    <div class="card text-center shadow">
-                        <img src="https://speedoco.vteximg.com.br/arquivos/ids/190132/Aletas-unisex-naranja-8-08841F960-1.jpg?v=637830431793730000-2000-2000undefined"
-                            class="card-img-top" alt="Fissure in Sandstone" />
-                        <div class="card-body">
-                            <a href="/product" class="btn btn-primary">Ver produto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-2">
-                    <div class="card text-center shadow">
-                        <img src="https://speedoco.vteximg.com.br/arquivos/ids/196686/vestido-de-bano-ninos-azul-8-1285714863-1.jpg?v=638139698802630000-1000-1000undefined"
-                            class="card-img-top" alt="Fissure in Sandstone" />
-                        <div class="card-body">
-                            <a href="/product" class="btn btn-primary">Ver produto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-2">
-                    <div class="card text-center shadow">
-                        <img src="https://speedoco.vteximg.com.br/arquivos/ids/196845/camiseta-proteccion-solar-ninos-azul-8N028170052-1.jpg?v=638139699771500000-1000-1000undefined"
-                            class="card-img-top" alt="Fissure in Sandstone" />
-                        <div class="card-body ">
-                            <a href="/product" class="btn btn-primary">Ver produto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Start products detail-->
+            <!-- end products detail-->
         </div>
     </div>
